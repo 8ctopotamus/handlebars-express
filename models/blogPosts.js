@@ -1,5 +1,3 @@
-const slugify = require('slugify')
-
 const blogPosts = [
   {
     name: '7 eCommerce Design Trends You Need to Know for 2022',
@@ -40,10 +38,6 @@ const blogPosts = [
     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque at iusto quam. Nobis repellendus placeat ea consectetur architecto minima, corporis aliquam enim error nesciunt, exercitationem perferendis excepturi, atque tempora quos laudantium. Nisi explicabo magni quae! Laboriosam ipsa, magni fuga dicta quae voluptatem quam. Illo quo voluptatum omnis. Explicabo, laboriosam? Dolores ea ipsum, iste non earum nobis officia dignissimos, adipisci quibusdam placeat ipsa culpa quisquam necessitatibus enim incidunt eaque sequi suscipit. Voluptatem necessitatibus accusantium expedita totam velit officia amet, similique modi porro impedit, adipisci sed. Porro odio tenetur, suscipit recusandae sequi itaque deserunt harum libero. Aut error sapiente dolorem ratione.'  
   
   }, 
-].map(post => {
-  const slug = slugify(post.name, { lower: true })
-  post.slug = slug
-  return post
-})
+]
 
 module.exports = blogPosts

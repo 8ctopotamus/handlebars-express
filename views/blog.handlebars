@@ -1,23 +1,15 @@
 <div class="container mt-5">
   <h1 class="mt-5 text-center">BLOG</h1>
-  {{log 'This is a test log'}}
-  {{#each posts}}
-    <div class="card bg-dark mb-5">
-      <div class="card-body">
-        <span class="badge bg-secondary">{{category}}</span>
-        <h5 class="card-title">{{this.name}}</h5>
-        <p class="card-text">
-          By 
-          {{#if author}} 
-            <span class="text-success">{{author}}</span>
-          {{else}}
-            <span class="text-danger">Anonymous</span>
-          {{/if}}
-          | {{this.date}}
-        </p>
-        <a href="/blog/{{slug}}" class="btn btn-primary">Read more</a>
-      </div>
+  <div class="row">
+    <div class="col-8">
+      {{log 'This is a test log'}}
+      {{#each posts as |post|}}
+        {{>post post-card=.}}
+      {{/each}}
     </div>
-  {{/each}}
+    <div class="col-4">
+      {{>sidebar}}
+    </div>
+  </div>
 </div>
    
